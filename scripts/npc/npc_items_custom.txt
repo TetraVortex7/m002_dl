@@ -3,23 +3,19 @@
 	//"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"
   "item_place_tower"
 {
-	
 	"BaseClass"	"item_datadriven"
  
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
 	"Model"	"models/props_gameplay/red_box.vmdl" 
 	"Effect"	"particles/generic_gameplay/dropped_item.vpcf"
 	"AbilityTextureName"			"item_place_tower"
-	
-	
-	
 
 	"ItemCost"						"30"
 	"ItemShopTags"					"tower"
 	"ItemQuality"					"consumable"
-"ItemAliases"					"tower;t"
+	"ItemAliases"					"tower;t"
 	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemStackable"					"1"
+	"ItemStackable"					"1"
 	"ItemPermanent"					"0"
 	"ItemInitialCharges"			"1"
 	"AbilityCastRange" "300"

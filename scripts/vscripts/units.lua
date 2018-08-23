@@ -1,9 +1,6 @@
 function Respoint (keys )
-    Timers:CreateTimer(0.1,function()            
-
-        local caster = keys.caster     --пробиваем IP усопшего
-        caster.respoint = caster:GetAbsOrigin() -- определяем точку спавна
-    end)
+    local caster = keys.caster     --пробиваем IP усопшего
+    caster.respoint = caster:GetAbsOrigin() -- определяем точку спавна
 end
 
 function Respawn (keys )

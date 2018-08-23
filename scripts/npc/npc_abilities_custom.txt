@@ -19,9 +19,9 @@
 	
 		"AbilityTextureName"			"item_phase_boots"
 
-"MAXLEVEL" "1"
-"LevelsBetweenUpgrades"		"1"
-"RequiredLevel"			"1"
+		"MAXLEVEL" "1"
+		"LevelsBetweenUpgrades"		"1"
+		"RequiredLevel"			"1"
 		
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
@@ -65,12 +65,12 @@
 		"Modifiers"
 		{
                 "modifier_item_phase_bootsxfd"
-{
-"Aura"          	"modifier_item_phase_bootsxfd_aura"
+				{
+				"Aura"          	"modifier_item_phase_bootsxfd_aura"
 				"Aura_Radius"   	"%radius"
-			"Aura_Teams"    	"DOTA_UNIT_TARGET_TEAM_BOTH"
+				"Aura_Teams"    	"DOTA_UNIT_TARGET_TEAM_BOTH"
 				"Aura_Types"    	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC" //mechanical?
-}
+				}
 			
 			"modifier_item_phase_bootsxfd_aura"
 			{
@@ -101,21 +101,12 @@
 	"BaseClass"	"ability_datadriven"
  
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-	
 	"AbilityTextureName"			"item_place_tower"
+	"MAXLEVEL" "1"
+	"LevelsBetweenUpgrades"		"1"
+	"RequiredLevel"			"1"
+    "AbilityGoldCost"   "60"
 
-"MAXLEVEL" "1"
-"LevelsBetweenUpgrades"		"1"
-"RequiredLevel"			"1"
-	
-	
-	
-
-     "AbilityGoldCost"   "60"
-
-
-
-	
 	"OnSpellStart"
 	{
 		
@@ -125,51 +116,29 @@
             	"Function"	  "replaceTower"
 		
 		}
-      
-	
-	
 	}
-	
-
 }
 
 "grade_tower2"
 {
-	
 	"BaseClass"	"ability_datadriven"
- 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-	
 	"AbilityTextureName"			"item_place_tower"
+	"MaxLevel" "1"
+	"LevelsBetweenUpgrades"		"1"
+	"RequiredLevel"			"1"
+    "AbilityGoldCost"   "120"
 
-"MAXLEVEL" "1"
-"LevelsBetweenUpgrades"		"1"
-"RequiredLevel"			"1"
-	
-	
-	
-
-     "AbilityGoldCost"   "120"
-
-
-
-	
 	"OnSpellStart"
 	{
-		
 		"RunScript"
 		{
 			"ScriptFile" "place_tower.lua"
             	"Function"	  "replaceTower"
-		
 		}
-      
-	
-	
 	}
-	
-
 }
+
 "return_dd"
 	{
 		// General
@@ -179,11 +148,9 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 		"AbilityTextureName"			"centaur_return"
-
-
-"MAXLEVEL" "9"
-"LevelsBetweenUpgrades"		"10"
-"RequiredLevel"			"10"
+		"MaxLevel" "9"
+		"LevelsBetweenUpgrades"		"10"
+		"RequiredLevel"			"10"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -246,9 +213,9 @@ wr_poison
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilityTextureName"			"huskar_burning_spear"
 
-"MAXLEVEL" "20"
-"LevelsBetweenUpgrades"		"3"
-"RequiredLevel"			"1"
+		"MaxLevel" "20"
+		"LevelsBetweenUpgrades"		"3"
+		"RequiredLevel"			"1"
 	
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -415,9 +382,9 @@ omni_bash
 		"AbilityTextureName"			"slardar_bash"
 
 
-"MAXLEVEL" "20"
-"LevelsBetweenUpgrades"		"3"
-"RequiredLevel"			"1"
+		"MaxLevel" "20"
+		"LevelsBetweenUpgrades"		"3"
+		"RequiredLevel"			"1"
 
 		// Precache
 		//-------------------------------------------------------------------------------------------------------------
@@ -538,9 +505,9 @@ omni_bash
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityTextureName"			"beastmaster_inner_beast"
 
-"MAXLEVEL" "20"
-"LevelsBetweenUpgrades"		"3"
-"RequiredLevel"			"1"
+		"MaxLevel" "20"
+		"LevelsBetweenUpgrades"		"3"
+		"RequiredLevel"			"1"
 	
 		// Casting
 		"AbilitySpecial"
@@ -728,8 +695,8 @@ omni_bash
 		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_NO"
 		"FightRecapLevel"				"1"
 		"AbilityTextureName"			"omniknight_purification"
-"MAXLEVEL" "20"
-"LevelsBetweenUpgrades"		"3"
+		"MaxLevel" "20"
+		"LevelsBetweenUpgrades"		"3"
 		"RequiredLevel"			"1"
 	
 		// Casting
@@ -833,8 +800,8 @@ wr_blur
 		"BaseClass"				"ability_datadriven"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"				"phantom_assassin_blur"
-"MAXLEVEL" "20"
-"LevelsBetweenUpgrades"		"3"
+		"MaxLevel" "20"
+		"LevelsBetweenUpgrades"		"3"
 		"RequiredLevel"			"1"
 	
 		// Precache
@@ -860,18 +827,16 @@ wr_blur
 			{
 				"Passive"	"1"
 				"IsHidden"	"1"
-	
 
-	
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_EVASION_CONSTANT"	"%bonus_evasion"
 				}
 	
-					"States"
-					{
-					"MODIFIER_STATE_NOT_ON_MINIMAP_FOR_ENEMIES"		"MODIFIER_STATE_VALUE_ENABLED"
-					}
+				"States"
+				{
+				"MODIFIER_STATE_NOT_ON_MINIMAP_FOR_ENEMIES"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
 			}
 	
 			"modifier_blur_enemy_datadriven"
@@ -891,14 +856,6 @@ wr_blur
 }	
 
 
-
-
-
-
-
-
-
-
 wr_null
 	{
 		// General
@@ -908,8 +865,8 @@ wr_null
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityTextureName"			"rubick_null_field"
 
-"MAXLEVEL" "20"
-"LevelsBetweenUpgrades"		"3"
+		"MaxLevel" "20"
+		"LevelsBetweenUpgrades"		"3"
 		"RequiredLevel"			"1"
 	
 		// Casting
@@ -963,9 +920,9 @@ wr_null
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityTextureName"			"crystal_maiden_brilliance_aura"
 
-"MAXLEVEL" "20"
-"LevelsBetweenUpgrades"		"3"
-"RequiredLevel"			"1"
+		"MaxLevel" "20"
+		"LevelsBetweenUpgrades"		"3"
+		"RequiredLevel"			"1"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -1008,18 +965,15 @@ wr_null
 		}
 	}
 
-
-	
-
 wr_ult
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"				"ability_datadriven"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"AbilityTextureName"		"drow_ranger_marksmanship"
-"MAXLEVEL" "9"
-"LevelsBetweenUpgrades"		"10"
+		"AbilityTextureName"		"drow_ranger_marksmanship"
+		"MaxLevel" "9"
+		"LevelsBetweenUpgrades"		"10"
 		"RequiredLevel"			"10"
 	
 		// Precache
@@ -1046,17 +1000,15 @@ wr_ult
 				"Passive"	"1"
 				"IsHidden"	"1"
 	
-
-	
 				"Properties"
 				{
-	"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_agi"
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_agi"
 				}
 	
-					"States"
-					{
-					"MODIFIER_STATE_NOT_ON_MINIMAP_FOR_ENEMIES"		"MODIFIER_STATE_VALUE_ENABLED"
-					}
+				"States"
+				{
+				"MODIFIER_STATE_NOT_ON_MINIMAP_FOR_ENEMIES"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
 			}
 	
 			"modifier_blur_enemy_datadriven"
@@ -1088,8 +1040,8 @@ wr_1skill
 		"FightRecapLevel"				"1"
 		"AbilityTextureName"			"windrunner_powershot"
 
-"MAXLEVEL" "20"
-"LevelsBetweenUpgrades"		"3"
+		"MaxLevel" "20"
+		"LevelsBetweenUpgrades"		"3"
 		"RequiredLevel"			"1"
 	
 		// Casting
@@ -1268,8 +1220,8 @@ wr_ult2
 		"AbilityTextureName"			"furion_force_of_nature"
 
 
-"MAXLEVEL" "9"
-"LevelsBetweenUpgrades"		"10"
+		"MaxLevel" "9"
+		"LevelsBetweenUpgrades"		"10"
 		"RequiredLevel"			"10"
 
 // Stats
@@ -1278,7 +1230,7 @@ wr_ult2
 		"AbilityCastPoint"				"0.5 0.5 0.5 0.5"
 		"AbilityCooldown"				"60"
 		"AbilityManaCost"				"90 180 270 360 450 540 630 720 810 900"
-"AOERadius"				"%area_of_effect"
+		"AOERadius"				"%area_of_effect"	
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -1362,9 +1314,9 @@ omni_cleave
 		"AbilityTextureName"			"sven_great_cleave"
 
 
-"MAXLEVEL" "20"
-"LevelsBetweenUpgrades"		"3"
-"RequiredLevel"			"1"
+		"MaxLevel" "20"
+		"LevelsBetweenUpgrades"		"3"
+		"RequiredLevel"			"1"
 	
 		// Precache
 		//-------------------------------------------------------------------------------------------------------------
@@ -1409,6 +1361,7 @@ omni_cleave
 			}
 		}
 	}
+	
 omni_crit
 	{
 		// General
@@ -1419,9 +1372,9 @@ omni_crit
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityTextureName"			"phantom_assassin_coup_de_grace"
 
-"MAXLEVEL" "9"
-"LevelsBetweenUpgrades"		"10"
-"RequiredLevel"			"10"
+		"MaxLevel" "9"
+		"LevelsBetweenUpgrades"		"10"
+		"RequiredLevel"			"10"
 	
 		// Precache
 		//-------------------------------------------------------------------------------------------------------------
@@ -1527,9 +1480,9 @@ omni_blood
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"	"dragon_knight_dragon_blood"
 
-"MAXLEVEL" "20"
-"LevelsBetweenUpgrades"		"3"
-"RequiredLevel"			"1"
+		"MaxLevel" "20"
+		"LevelsBetweenUpgrades"		"3"
+		"RequiredLevel"			"1"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -1573,11 +1526,9 @@ omni_ult2
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"FightRecapLevel"				"1"
 		"AbilityTextureName"			"ursa_enrage"
-
-
-"MAXLEVEL" "9"
-"LevelsBetweenUpgrades"		"10"
-"RequiredLevel"			"10"
+		"MaxLevel" "9"
+		"LevelsBetweenUpgrades"		"10"
+		"RequiredLevel"			"10"
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -1773,10 +1724,9 @@ omni_ult2
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityTextureName"			"lycan_feral_impulse"
-
-"MAXLEVEL" "9"
-"LevelsBetweenUpgrades"		"10"
-"RequiredLevel"			"10"
+		"MaxLevel" "9"
+		"LevelsBetweenUpgrades"		"10"
+		"RequiredLevel"			"10"
 	
 		// Casting
 		"AbilitySpecial"
@@ -1831,10 +1781,9 @@ omni_ult2
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"OnCastbar"					"0"
 		"AbilityTextureName"			"nevermore_necromastery"
-
-"MAXLEVEL" "9"
-"LevelsBetweenUpgrades"		"10"
-"RequiredLevel"			"10"
+		"MaxLevel" "9"
+		"LevelsBetweenUpgrades"		"10"
+		"RequiredLevel"			"10"
 	
 		// Special
 		//------------------------------------------------------------------------------------------------------------
@@ -1934,10 +1883,9 @@ omni_ult2
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS | DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityTextureName"			"clinkz_death_pact"
-
-"MAXLEVEL" "9"
-"LevelsBetweenUpgrades"		"10"
-"RequiredLevel"			"10"
+		"MaxLevel" "9"
+		"LevelsBetweenUpgrades"		"10"
+		"RequiredLevel"			"10"
 	
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -2099,9 +2047,8 @@ necr_1skill
 		"AbilityTextureName"			"skeleton_king_hellfire_blast"
 
 
-"MAXLEVEL" "20"
-"LevelsBetweenUpgrades"		"3"
-		"RequiredLevel"			"1"
+		"MaxLevel" "20"
+		"LevelsBetweenUpgrades"		"3"
 
 // Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -2178,10 +2125,8 @@ omni_shield
 		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_NO"
 		"FightRecapLevel"				"1"
 		"AbilityTextureName"			"abaddon_aphotic_shield"
-
-"MAXLEVEL" "20"
-"LevelsBetweenUpgrades"		"3"
-"RequiredLevel"			"1"
+		"MaxLevel" "20"
+		"LevelsBetweenUpgrades"		"3"
 	
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -2326,8 +2271,8 @@ omni_shield
 		"AbilityTextureName"			"furion_force_of_nature"
 
 
-"MAXLEVEL" "9"
-"LevelsBetweenUpgrades"		"10"
+		"MaxLevel" "9"
+		"LevelsBetweenUpgrades"		"10"
 		"RequiredLevel"			"10"
 
 // Stats
@@ -2413,9 +2358,9 @@ necr_3skill
 		"FightRecapLevel"				"1"
 		"AbilityTextureName"			"crystal_maiden_crystal_nova"
 		"AOERadius"						"%radius"
-	"MAXLEVEL" "20"
-"LevelsBetweenUpgrades"		"3"
-"RequiredLevel"			"1"
+		"MaxLevel" "20"
+		"LevelsBetweenUpgrades"		"3"
+		"RequiredLevel"			"1"
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"700"

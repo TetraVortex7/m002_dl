@@ -1,26 +1,13 @@
 "AddonInfo"
 {
-  "TeamCount" "1"
   "maps"      "dl1"
-  "IsPlayable"  "1"
- // "template_map"
- // {
- //         "MaxPlayers"                    "10"
-  //}
-  //"playground"
-  //{
- //         "MaxPlayers"                    "10"
- // }
+  "CheckAFKPlayers"	"1"
+  "PenaltiesEnabled"		"1"
+  
   "dl1"
   {
-"MaxPlayers" "5"
-	}
-//  "desert_duo"
-//  {
-//          "MaxPlayers"                    "10"
-//  }
-//  "forest_solo"
-//  {
-//          "MaxPlayers"                    "10"
-//  }
+    "MaxPlayers"    "5"
+	"TeamCount"		"1"
+  }
+
 }

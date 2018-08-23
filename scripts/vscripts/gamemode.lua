@@ -10,34 +10,10 @@ if GameMode == nil then
     _G.GameMode = class({})	
 	_G.Filter = class({})
 end
--- This library can be used for starting customized animations on units from lua
-require('libraries/animations')
--- This library can be used for advancted physics/motion/collision of units.  See PhysicsReadme.txt for more information.
-require('libraries/physics')
--- This library can be used for advanced 3D projectile systems.
-require('libraries/projectiles')
 
--- This library can be used for performing "Frankenstein" attachments on units
-require('attachments')
--- This library can be used to create container inventories or container shops
-require('libraries/containers')
 
 -- This library allow for easily delayed/timed actions
 require('libraries/timers')
-
-
--- This library can be used for sending panorama notifications to the UIs of players/teams/everyone
-require('libraries/notifications')
-
--- This library can be used to synchronize client-server data via player/client-specific nettables
-require('libraries/playertables')
-
--- This library provides a searchable, automatically updating lua API in the tools-mode via "modmaker_api" console command
-require('modmaker')
--- This library provides an automatic graph construction of path_corner entities within the map
-require('libraries/pathgraph')
--- This library (by Noya) provides player selection inspection and management from server lua
-require('libraries/selection')
 
 -- These internal libraries set up barebones's events and processes.  Feel free to inspect them/change them if you need to.
 require('internal/gamemode')
@@ -49,15 +25,12 @@ require('settings')
 require('events')
 
 
--- This is a detailed example of many of the containers.lua possibilities, but only activates if you use the provided "playground" map
 
 
+_G.GAME_ROUND = 0 -- номер текущего раунда
+_G.MAX_ROUNDS = 40 -- номер конечного раунда
+_G.ROUND_UNITS = 20 -- кол-во юнитов на 1 раунде
 
-GAME_ROUND = 0 -- номер текущего раунда
-MAX_ROUNDS = 40 -- номер конечного раунда
-ROUND_UNITS = 20 -- кол-во юнитов на 1 раунде
-
---require("examples/worldpanelsExample")
 
 --[[
   This function should be used to set up Async precache calls at the beginning of the gameplay.
@@ -173,7 +146,6 @@ function GameMode:InitGameMode()
   DebugPrint('[BAREBONES] Starting to load Barebones gamemode...')
 
   -- Commands can be registered for debugging purposes or as functions that can be called by the custom Scaleform UI
-  Convars:RegisterCommand( "command_example", Dynamic_Wrap(GameMode, 'ExampleConsoleCommand'), "A console command example", FCVAR_CHEAT )
   DebugPrint('[BAREBONES] Done loading Barebones gamemode!\n\n')
   GameRules:GetGameModeEntity():SetDamageFilter( Dynamic_Wrap( Filter, "DamageFilter" ), self )
 end
@@ -188,26 +160,5 @@ function Filter:DamageFilter( kv ) --[[ Эта функция будет выз�
 	attacker = EntIndexToHScript(kv.entindex_attacker_const)
     victim = EntIndexToHScript(kv.entindex_victim_const)
 	
-	if (attacker:GetUnitName() == "npc_dota_tower_lvl1" or attacker:GetUnitName() == "towerlvl2")  and (victim:GetUnitName() == "bat_1" or victim:GetUnitName() == "Krot_sl" or victim:GetUnitName() == "Krot_sr" or victim:GetUnitName() == "BOSS" or victim:GetUnitName() == "ursa_yellow" or victim:GetUnitName() == "wolves_1" or victim:GetUnitName() == "wolves_2" or victim:GetUnitName() == "wolves_3") then return false 
-	else return true	
-	end
-	
     return true --[[ Да, функция еще и что-то возвращать должна. Позднее узнаем, что именно. ]]
-end
-
-
-
--- This is an example console command
-function GameMode:ExampleConsoleCommand()
-  print( '******* Example Console Command ***************' )
-  local cmdPlayer = Convars:GetCommandClient()
-  if cmdPlayer then
-    local playerID = cmdPlayer:GetPlayerID()
-    if playerID ~= nil and playerID ~= -1 then
-      -- Do something here for the player who called this command
-      PlayerResource:ReplaceHeroWith(playerID, "npc_dota_hero_viper", 1000, 1000)
-    end
-  end
-
-  print( '*********************************************' )
 end

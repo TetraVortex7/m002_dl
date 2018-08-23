@@ -39,7 +39,7 @@
     "item" "item_splitbow"
     "item" "item_splitbow2"
     "item" "item_knife" 
-"item" "item_boots_dd"
+	"item" "item_boots_dd"
   }
       
   "misc"

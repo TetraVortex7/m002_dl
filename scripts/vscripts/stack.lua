@@ -37,7 +37,6 @@ function DecreaseStackCount(event)
 
     -- just some saftey checks -just in case
     if modifier then
-
         -- if there is something to reduce reduce
         -- else just remove the modifier
         if count and count > 1 then
